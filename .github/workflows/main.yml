@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print hello Testing
+      - name: Print hello in Testing
         run: echo "Hello, my-testing"
 
   my-deploy:
     runs-on: ubuntu-latest
+    needs: [my-testing]
+    
     steps:
-      - name: Print hello Deloy
+      - name: Print hello in Deloy
         run: echo "Hello, my-deploy"
