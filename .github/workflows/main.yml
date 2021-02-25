@@ -1,4 +1,8 @@
 name: hello
+env: 
+  APPLICATION_NAME   : "MyFlask"
+  DELPOY_PACKAGE_NAME: "flask-deploy-ver-${{github.sha}}"
+  
 
 on:
   push:
@@ -11,7 +15,13 @@ jobs:
 
     steps:
       - name: Print hello in Testing
-        run: echo "Hello, my-testing"
+        run:  echo "Hello, my-testing"
+        
+      - name: Execure few commands
+        run: |
+          echo "Hello Message1"
+          echo "Hello Message2"
+          echo "Application name: ${{enx.APPLICATION_NAME}}"
 
   my-deploy:
     runs-on: ubuntu-latest
@@ -19,4 +29,7 @@ jobs:
     
     steps:
       - name: Print hello in Deloy
-        run: echo "Hello, my-deploy"
+        run:  echo "Hello, my-deploy"
+        
+      - name: Printing Deployment package
+        run:  echo "Deploy package name is {{env.DEPLOY_PACKAGE_NAME}}"
