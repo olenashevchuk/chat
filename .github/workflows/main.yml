@@ -34,10 +34,21 @@ jobs:
   my-deploy:
     runs-on: ubuntu-latest
     needs: [my-testing]
+    env:
+      VAR1: "this is Job Level Variable1"
+      VAR2: "this is Job Level Variable2"
 
     steps:
-      - name: Print hello in Deloy
+      - name: Print hello in Deploy
         run: echo "Hello, my-deploy"
+
+      - name: Print env vars
+        run: |
+          echo "Var1 = ${{env.VAR1}}"
+          echo "Var2 = ${{env.VAR2}}"
+          echo "local var = $LOCAL_VAR"
+        env:
+          LOCAL_VAR: "This is Super local Environment variable"
 
       - name: Printing Deployment package
         run: echo "Deploy package name is ${{env.DEPLOY_PACKAGE_NAME}}"
