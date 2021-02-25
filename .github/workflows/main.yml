@@ -1,0 +1,23 @@
+name: hello
+
+on:
+  push:
+    branches: 
+      -master
+      
+jobs:
+  my-testing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print hello Testing
+        run: echo "Hello, my-testing"
+
+    
+  my-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hello Deloy
+        run: echo "Hello, my-deploy"
+        
+    
