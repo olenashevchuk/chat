@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "Hello Message1"
           echo "Hello Message2"
-          echo "Application name: ${{enx.APPLICATION_NAME}}"
+          echo "Application name: ${{env.APPLICATION_NAME}}"
 
   my-deploy:
     runs-on: ubuntu-latest
