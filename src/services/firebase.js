@@ -5,12 +5,12 @@ import 'firebase/analytics'
 
 if (!firebase.apps.length) {
   firebase.initializeApp({
-    apiKey: 'AIzaSyD5ylhZUeC298HiGu0eCcvb_st3JW2IgGk',
-    authDomain: 'chat-6f088.firebaseapp.com',
-    projectId: 'chat-6f088',
-    storageBucket: 'chat-6f088.appspot.com',
-    messagingSenderId: '242422434784',
-    appId: '1:242422434784:web:3511d5328b94d13e37f985'
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_AUTH_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_AUTH_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_AUTH_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_AUTH_APP_ID
   })
 } else {
   firebase.app()
