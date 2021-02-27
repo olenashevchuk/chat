@@ -16,8 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build:production": "env-cmd -f .env react-scripts build",
-    "deploy:prod:host": "firebase deploy -P development -- only hosting",
+    "build:development": "env-cmd -f .env react-scripts build",
+    "deploy:dev:host": "firebase deploy -P development -- only hosting",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
