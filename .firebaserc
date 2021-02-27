@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "chat-6f088"
+    "default": "chat-app-development",
+    "production": "chat-app-development"
   }
 }

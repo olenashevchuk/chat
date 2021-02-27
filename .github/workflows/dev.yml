@@ -3,7 +3,7 @@ name: Build and Deploy to Firebase with development environment
 on:
   push:
     branches:
-      - dev
+      - demo2
 
 jobs:
   build:
