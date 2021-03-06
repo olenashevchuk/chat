@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
       # Add any build steps here. For example:
       - run: CI=false npm run build:development
       - uses: FirebaseExtended/action-hosting-deploy@v0
