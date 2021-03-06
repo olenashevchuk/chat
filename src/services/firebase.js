@@ -5,12 +5,13 @@ import 'firebase/analytics'
 
 if (!firebase.apps.length) {
   firebase.initializeApp({
-    apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_AUTH_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_AUTH_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_AUTH_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_AUTH_APP_ID
+    apiKey: 'AIzaSyDdmp7-QhEwWc1s-tsqJOOEQM4sfgp3ylA',
+    authDomain: 'chat-app-development.firebaseapp.com',
+    projectId: 'chat-app-development',
+    storageBucket: 'chat-app-development.appspot.com',
+    messagingSenderId: '716112318824',
+    appId: '1:716112318824:web:db694a9a6c4a0a0dde46dd',
+    measurementId: 'G-N5NBNM327G'
   })
 } else {
   firebase.app()
