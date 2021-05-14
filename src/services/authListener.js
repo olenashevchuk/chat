@@ -1,0 +1,3 @@
+const authListener = () => {
+  return true
+}

@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "chat-app-development",
+    "development": "chat-app-development"
+  }
+}
